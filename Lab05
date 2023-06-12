@@ -1,0 +1,45 @@
+//main
+
+package com.mycompany.interfacemain;
+
+public class InterfaceMain {
+
+    public static void main(String[] args) {
+        
+        InterfaceImplemented i1=new InterfaceImplemented();
+        i1.display();
+    }
+}
+
+
+
+
+//interface
+
+package com.mycompany.interfacemain;
+
+public interface MyFirstInterface {
+    
+   public int x=6;
+   //final public static int x=6;
+   //all variable are declaired inside an interface are by default, finale, public static whether it is imlicitly stated or not
+   
+   public void display();
+   //abstarct void display
+   //all the methods 
+   
+}
+
+
+//implement
+
+package com.mycompany.interfacemain;
+
+public class InterfaceImplemented implements MyFirstInterface
+{
+    public void display()
+    {
+        System.out.println("The Value of x is "+x);
+        //the value inside the interface by default it taken as final. so the value cant be changed
+    }
+}
